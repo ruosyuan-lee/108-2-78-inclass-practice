@@ -1,11 +1,69 @@
 ---
----
+title: "2020-03-18"
+author: "李若瑄"
+date: "3/11/2020"
+output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## R Markdown
+
+## packages
+
+```{r}
+library(readr)
+```
+
+## Create object
+
+a <- 2
+a = 2 # = 與 <-同義
+
+```{r}
+a <- 2
+a = 2 # = 與 <-同義
+```
+
+
+```{r}
+3 -> b
+```
+
+```{r}
+a+b=
+```
+
+```{r}
+"我的年紀"<-20
+my_age<-"我的年紀"
+```
+
+```{r}
+logi1 <- c(T,TRUE,F,FALSE,FALSE)
+```
+
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum3 <- c(vNum1,vNum2)
+vNum4 <- c(-1,5,2,3)
+vNum5 <- c(c(-1,5),c(2,3))
+```
+
+```{r}
+vNum3 <- c(vNum2, vNum1)
+vNum4 <- c(vNum4, vNum1) 
+```
+
+```{r}
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+
+cat(dialogue, sep="\n")
+```
+
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
