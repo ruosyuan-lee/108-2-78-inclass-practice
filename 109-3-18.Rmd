@@ -89,6 +89,17 @@ dialogue <- c('小明說："明天不用上課。"',
 cat(dialogue, sep="\n")
 ```
 
+```{r}
+HeSaid <- '他說:"今天多了一個確診。"'
+```
+
+```{r}
+library(httr)
+library(dplyr)
+GET("https://api.github.com/repos/tpemartin/108-2-56-inclass-practice/commits") %>%
+  content() %>%
+  View()
+```
 
 ## atomic vector
 
