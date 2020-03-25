@@ -94,9 +94,17 @@ num1 <- 5
 num2 <- c(5)
 ```
 
-## atomic vector
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum3 <- c(vNum1,vNum2)
+vNum4 <- c(-1,5,2,3)
+vNum5 <- c(c(-1,5),c(2,3))
+```
 
-
+```{r}
+logi1 <- c(T,TRUE,F,FALSE,FALSE)
+```
 
 ```
 library(readr)
