@@ -24,6 +24,46 @@ c(1:5) -> numbers
 hello <- "world"
 ```
 
+```{r}
+vectorExample <- c(2, 6, 7)
+listExample <- list(2, 6, 7)
+
+print(vectorExample)
+print(listExample)
+```
+
+```{r}
+ # 用vector儲存
+c("2020-03-31T13:40:55Z",
+  "一芳",
+  "2",
+  "水果茶")
+
+ # 用list儲存
+library(lubridate)
+list(
+  ymd_hms("2020-03-31T13:40:55Z"),
+  "一芳",
+  2,
+  "水果茶"
+  )
+```
+
+```{r}
+library(lubridate)
+`小明交易1` <- list(
+  ymd_hms("2020-03-31T13:40:55Z"), # Date/Time class
+  "一芳", # character
+  2, # numeric
+  "水果茶" # character
+)
+print(`小明交易1`)
+```
+
+
+
+
+
 
 
 ```{r setup, include=FALSE}
