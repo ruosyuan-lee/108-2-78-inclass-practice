@@ -4,6 +4,27 @@ author: "李若瑄"
 date: "3/11/2020"
 output: html_document
 ---
+```{r}
+"是在" <- `哈樓`
+```
+
+```{r}
+"是在" -> `哈樓`
+```
+
+```{r}
+C(1:5) -> numbers
+```
+
+```{r}
+c(1:5) -> numbers
+```
+
+```{r}
+hello <- "world"
+```
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
