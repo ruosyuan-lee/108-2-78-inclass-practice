@@ -106,6 +106,8 @@ vNum5 <- c(c(-1,5),c(2,3))
 logi1 <- c(T,TRUE,F,FALSE,FALSE)
 ```
 
+
+
 ```
 library(readr)
 A02_company_all_public <- read_csv("https://www.dropbox.com/s/rtz2a9na62n3a8l/A02_company_all_public.csv?dl=1")
