@@ -112,8 +112,32 @@ vectorExample[c(3,2,1)] # 產生重新排列效果
 # 顯示到第一層
 str(listExample, max.level=1)
 
-listExample[c(1,2)]
+str(listExample[c(1,2)], max.level=1)
+str(listExample[c(2,1)], max.level=1)
 ```
+
+```{r}
+str(tainanSportsMap, max.level=1)
+str(tainanSportsMap[c(1,382,1076)], max.level=1)
+```
+```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
+
+listExample[c("學期")]
+listExample[c("student","學期")]
+listExample[c("學期","student")]
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
