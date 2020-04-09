@@ -162,7 +162,19 @@ str(taipeiNightMarkets[c(T,F,F,
   T,F,F,
   F,T)], max.level = 1)
 ```
-
+```{r}
+selectedMarkets <- rep(F,14) # repeat
+print(selectedMarkets)
+selectedMarkets[c(1,5,10,14)] <- TRUE
+print(selectedMarkets)
+```
+```{r}
+str(taipeiNightMarkets[selectedMarkets],
+    max.level = 1)
+```
+```{r, results='asis'}
+str(listExample,max.level = 3)
+```
 
 
 
