@@ -129,6 +129,10 @@ listExample[c("student","學期")]
 listExample[c("學期","student")]
 ```
 ```{r}
+library(jsonlite)
+```
+
+```{r}
 fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
 ```
 ```{r}
@@ -139,28 +143,24 @@ vectorExample[c(T,T,F)] # 要，要，不要
 str(listExample[c(F,T)]) # 不要，要
 str(listExample[c(T,T)]) # 要，要
 ```
-```{r}
-str(taipeiNightMarkets)
-```
 
 ```{r}
 names(taipeiNightMarkets)
 ```
 ```{r}
-c(T,F
-  F,F
-  T,F
-  F,F
+c(T,F,F,
+  F,T,F,
+  F,F,F,
+  T,F,F,
   F,T
-  F,F
-  F,T) -> selectedMarkets
-str(taipeiNightMarkets[c(T,F
-  F,F
-  T,F
-  F,F
-  F,T
-  F,F
-  F,T)],max level = 1)
+  ) -> selectedMarkets
+taipeiNightMarkets[selectedMarkets]
+
+str(taipeiNightMarkets[c(T,F,F,
+  F,T,F,
+  F,F,F,
+  T,F,F,
+  F,T)], max.level = 1)
 ```
 
 
