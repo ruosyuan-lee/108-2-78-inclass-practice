@@ -37,7 +37,6 @@ listExample <-
     )
   )
 # 有多少位置可選：
-length(listExample)
 ```
 ```{r}
 listExample[[1]]
@@ -240,6 +239,19 @@ majors[c(T,T,F,F,T)]
 select1 <- names[c(T,T,F,F,T)]; select1
 selcet2 <- gender[c(T,T,F,F,T)]; select2
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
