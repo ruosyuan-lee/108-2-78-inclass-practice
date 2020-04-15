@@ -162,7 +162,18 @@ List of 2
 
 可用str(accidents)來檢查你的答案是否有符合格式。
 ```{r ans33}
-# accidents
+accidents<-list(
+  time=ymd("2014/1/1"),
+  bureaus=list(
+    "板橋分局"=list(
+      type="駕駛人過失-其他",
+      casualties=1),
+    "海山分局"=list(
+      type="駕駛人過失-搶越行人穿越道",
+      casualties=1)
+         )
+        )
+accidents
 ```
 
 
