@@ -221,70 +221,37 @@ select2 <- select1[c(1,4)]; select2
 numVector[c(T,T,F,T,F,F,T)][c(1,4)]
 ```
 
-
-
 ```{r}
-majors <- c("經濟學系","經濟學系","社會學系","社工系","經濟學系")
-names <- c("小英", "小美", "大雄","阿華", "阿尼")
-gender <- c("F","F","M","F","M")
-```
-
-創造出只要“經濟學系”學生的邏輯向量，econOnly。
-選出econOnly的names與gender。
-在econOnly的gender下創造出只要“F”的邏輯向量, econFemaleOnly。
-選出names中為“經濟學系”且“F”的姓名。
-
-```{r}
-majors[c(T,T,F,F,T)]
-select1 <- names[c(T,T,F,F,T)]; select1
-selcet2 <- gender[c(T,T,F,F,T)]; select2
-```
-
-```{r}
-# 10位學生的主系
-majors10_char <- c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
-
-typeof(majors10_char)
-class(majors10_char)
-```
-
-```{r}
-majors10_factor <- factor(majors10_char)
-# 或
-majors10_factor <- factor(
-  c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
-)
-
-typeof(majors10_factor)
-class(majors10_factor)
-```
-
-```{r}
-majors10_char
+str(listExample)
 ```
 ```{r}
-majors10_factor
-```
+get1 <- listExample[["學期"]] # 拿出來
+get1 <- listExample$`學期`
 
-```{r}
-as.integer(majors10_factor) 
+get2 <- listExample["學期"] # 只留下
 ```
 ```{r}
-levels(majors10_factor)
+get1$`108-1` -> get1_layer1
+str(get1_layer1)
 ```
 ```{r}
-as.character(majors10_factor)
+get1_layer1[[1]] -> get1_layer2
+str(get1_layer2)
+```
+```{r}
+get1_layer2$teacher
+```
+```{r}
+get1$`108-1`[[1]]$teacher
+```
+```{r}
+get2_layer1 <- get2[[1]]
+get2_layer2 <- get2_layer1[["108-1"]]
+get2_layer3 get2_layer2[[1]]
+get2_layer3$teacher
 ```
 
 
-
-
-
-```{r}
-library(lubridate)
-tpeTime <- ymd_hms("2020-03-18 13:52:40",
-        tz="Asia/Taipei")
-```
 
 
 
