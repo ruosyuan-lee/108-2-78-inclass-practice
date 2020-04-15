@@ -190,23 +190,27 @@ fiveReceipts <- .randomReceipts(n=5)
 用levels()函數來顯示fiveReceipts有那幾個levels，並把回傳的結果值存在levels_fiveReceipts. 
 
 ```{r ans41}
-# levels_fiveReceipts
+levels(fiveReceipts) -> "levels_fiveReceipts"
+levels_fiveReceipts
 ```
 ### 4.2
 使用as.integer()函數來顯示fiveReceipts在電腦的存法，並把回傳的結果值存在storage_fiveReceipts. 
 ```{r ans42}
-# storage_fiveReceipts
+as.integer(fiveReceipts) -> "storage_fiveReceipts"
+storage_fiveReceipts
 ```
 
 ### 4.3
 使用as.character()函數將fiveReceipts在螢幕顯示的表面值改成字串，並把回傳的結果值存在chr_fiveReceipts.
 ```{r ans43}
-# chr_fiveReceipts
+as.character(fiveReceipts) -> "chr_fiveReceipts"
+chr_fiveReceipts
 ```
 ### 4.4
 若我們想要把fiveReceipts的螢幕顯示值用sum()函數加總，在只使用as.{class name}函數下，要怎麼做？把sum完的結果存在sum_fiveReceipts。
 ```{r ans44}
-# sum_fiveReceipts
+sum_fiveReceipts <- sum(as.integer(as.character(fiveReceipts)))
+sum_fiveReceipts
 ```
 
 ## 5
@@ -224,16 +228,16 @@ source("https://www.dropbox.com/s/xtge2ghfb7dhple/108-2-hw1-4.R?dl=1")
 
 ```{r ans5c, eval=F}
 yy <- 2020
-mm <- `Mar.`
+mm <- "Mar."
 dd <- 15
-event_list <- list(
-  time=ymd(paste0(yy,",",mm,dd)),
+event_list = list(
+  time=lubridate::ymd(paste0(yy,",",mm,dd)),
   list(
     name="小明",
-    `是否完成`=True,
-    完成所花時間(秒)=350,
+    `是否完成`=TRUE,
+    `完成所花時間(秒)`=350,
     tools=c(
       "anchor","axe")
-)
+))
 ```
 
