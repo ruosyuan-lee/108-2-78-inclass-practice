@@ -104,7 +104,6 @@ course<-list(
   )
   )
 )
-str(course)
 course
 ```
 
@@ -117,7 +116,25 @@ course
 你要怎麼修改你的course物件內容讓裡頭的time_slots可以有兩個時段及地點，答案物件為courseUpdate。courseUpdate內容只有time_place與course不同，其餘元素值維持與course相同內容。
 
 ```{r ans32}
-# courseUpdate
+courseUpdate<-list(
+  approve=T,
+  course_info=list(
+    coursename="會計學",
+    type="必",
+    credits=3,
+    time_place=list(
+      list(
+      weekday="星期三",
+      time_slots=c(7,8),
+      classroom="商2F05"),
+      list(
+      weekday="星期二",
+      time_slots=c(5),
+      classroom="商2F05")
+  )
+  )
+)
+courseUpdate
 ```
 
 ### 3.3
