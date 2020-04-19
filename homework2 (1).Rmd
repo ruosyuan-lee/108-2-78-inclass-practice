@@ -125,7 +125,7 @@ Pikachu
 記得class怎麼改嗎?vector內容請按照「atk、def、hp」這樣的順序喔。
 ```{r ans32}
 Pikachu[[4]] -> Pikachu_stats
-Pikachu_stats -> c("atk","def","hp")
+
 Pikachu_stats
 ```
 
