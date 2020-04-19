@@ -125,7 +125,7 @@ Pikachu
 記得class怎麼改嗎?vector內容請按照「atk、def、hp」這樣的順序喔。
 ```{r ans32}
 Pikachu[[4]] -> Pikachu_stats
-
+Pikachu_stats -> class(numeric)
 Pikachu_stats
 ```
 
@@ -134,7 +134,8 @@ Pikachu_stats
 最後跟3.1一樣，將胖丁的相關資料並存在叫做Jigglypuff的list物件。
 
 ```{r ans33}
-# Jigglypuff
+Gamemaster$pokemon[[46]]$speciesName -> Jigglypuff
+Jigglypuff
 ```
 
 ### 3.4 魔王題——考驗自己有沒有成為程式設計大師/洛托姆的時候到了
