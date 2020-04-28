@@ -437,11 +437,17 @@ str(list1)
 ```
 
 ```{r}
-
+fromJSON("https://www.dropbox.com/s/uday7x99k9q9sxm/course.json?dl=1", simplifyDataFrame = T) -> course
+str(course)
 ```
 
 ```{r}
-
+course[[2]]$type <- c("選")
+course[[1]]$approve <- c(T)
+course[[1]]$approve -> course[[1]]
+course -> course_update
+str(course_update)
+course_update
 ```
 
 ```{r}

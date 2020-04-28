@@ -104,6 +104,7 @@ course<-list(
   )
   )
 )
+str(course)
 course
 ```
 
