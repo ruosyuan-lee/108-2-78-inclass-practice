@@ -34,7 +34,84 @@ sequenceNums %% 2 # 餘數為1則是奇數，0則是偶數
 ```
 
 ```{r}
+5*c(1,3,4)+7
+# 其實是
+c(5)*c(1,3,4)+c(7)
 
+## 對向量5，向量7進行recycle:
+c(5,5,5)*c(1,3,4)+c(7,7,7)
+## Recycle等長後才進行elementwise operation:
+c(5*1+7, 5*3+7, 5*4+7)
+```
+
+```{r}
+# 狀況一: 堆疊一定倍數剛好一樣長
+c(2,3)/c(-2,-13,10,22)
+c(2,3,2,3)/c(-2,-13,10,22)
+```
+
+```{r}
+# 狀況二: 倍數堆疊一定會超過，只好截斷
+c(2,3)/c(-2,-13,10)
+c(2,3,2)/c(-2,-13,10)
+```
+
+```{r}
+paste0(
+  c("我叫"), c("小明","小美")
+)
+```
+
+```{r}
+paste0(
+  c("我叫","我叫"), c("小明","小美")
+)
+```
+
+```{r}
+paste0(
+  c("他叫","我叫"), c("小明","小美","大雄")
+)
+```
+```{r}
+example <- list(
+  name=c("小明","小花","小新","美美"),
+  height=c(175,166,170,160),
+  weight=c(77,NA,60,43),
+  birthday=lubridate::ymd(c("1998-03-11","1999-12-22","1995-08-22","2001-10-10")),
+  hobby=c("美食 旅遊","旅遊 時尚","3C 美食","音樂 旅遊"),
+  residence=c("Taipei","New Taipei","Taichung","Kaohsiung"),
+  allowance=factor(c("0-1000","1001-2000","2000+","1001-2000")),
+  bloodType=c("A","B","B","O")
+)
+```
+
+```{r}
+str(example[c("name","height")])
+
+pick_above170 <- example$height >= 170
+example$name[pick_above170]
+```
+
+```{r}
+source("https://www.dropbox.com/s/qsrw069n94k61lj/transcript100to103_list.R?dl=1")
+```
+
+```{r}
+str(transcript100to103)
+```
+
+```{r}
+# 只要成績大於85的
+pick_above85 <-
+  transcript100to103$`成績` > 85
+```
+
+```{r}
+# 各學屆2年級人數
+table(transcript100to103$`學屆`)
+# 各學屆2年級成績大於85人數
+table(transcript100to103$`學屆`[pick_above85])
 ```
 
 ```{r}
@@ -49,13 +126,11 @@ sequenceNums %% 2 # 餘數為1則是奇數，0則是偶數
 
 ```
 
-```{r}
 
-```
 
-```{r}
 
-```
+
+
 
 
 
