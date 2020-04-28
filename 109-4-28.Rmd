@@ -9,6 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ```{r}
 a <- c(2, 3, 5)
 b <- c(4,-1, 3)
@@ -115,6 +116,42 @@ table(transcript100to103$`學屆`[pick_above85])
 ```
 
 ```{r}
+print(example[c("name","birthday")])
+
+pick_after98 <- example$birthday >= lubridate::ymd("1998-01-01")
+example$name[pick_after98]
+```
+
+```{r}
+source("https://www.dropbox.com/s/16h6ggua6qtydci/exchangeRate.R?dl=1")
+```
+
+```{r}
+str(exchangeRate)
+```
+
+```{r}
+# 只要1998年1月（含）以後的
+library(lubridate)
+pick_after98_01 <-
+  exchangeRate$期間 >= ymd("1998-01-01")
+```
+
+```{r}
+exchangeRate_after98 <-
+  list(
+    `期間`=exchangeRate$`期間`[pick_after98_01],
+    `幣別`=exchangeRate$`幣別`[pick_after98_01],
+    `匯率`=exchangeRate$`匯率`[pick_after98_01]
+    
+  )
+```
+
+```{r}
+
+```
+
+```{r}
 
 ```
 
@@ -125,6 +162,15 @@ table(transcript100to103$`學屆`[pick_above85])
 ```{r}
 
 ```
+
+```{r}
+
+```
+
+
+
+
+
 
 
 
