@@ -360,11 +360,17 @@ garbageRoutes$linename[pick_afternoonRoutes]
 ```
 
 ```{r}
-
+?str_detect
 ```
 
 ```{r}
-
+library(stringr)
+fruit <- c("apple", "banana", "pear", "pinapple")
+str_detect(fruit, "a")
+str_detect(fruit, "^a") #以a開頭
+str_detect(fruit, "a$")
+str_detect(fruit, "b")
+str_detect(fruit, "[aeiou]")
 ```
 
 ```{r}
