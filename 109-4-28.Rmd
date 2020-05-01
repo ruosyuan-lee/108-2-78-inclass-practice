@@ -329,12 +329,55 @@ example$name[pick_loveFood]
 ```
 
 ```{r}
+jsonlite::fromJSON("https://data.ntpc.gov.tw/od/data/api/EDC3AD26-8AE7-4916-A00B-BC6048D19BF8?$format=json") ->
+  garbageRoutes
+```
+
+```{r}
+str(garbageRoutes)
+```
+
+```{r}
+#  1 用typeof()函數查詢電腦實質上如何看待garbageRoutes。
+typeof(garbageRoutes)  
+#  2 用class()函數查詢電腦把它能進行的操作運算歸屬於哪一類型。
+class(garbageRoutes)
+```
+
+```{r}
 
 ```
 
 ```{r}
 
 ```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
