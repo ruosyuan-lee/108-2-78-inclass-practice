@@ -219,75 +219,113 @@ sum(list_victimAges_female$`數目`[pick_above30], na.rm = T)
 ```
 
 ```{r}
+print(example[c("name","bloodType")])
 
+pick_bloodB <- example$bloodType == "B"
+example$name[pick_bloodB]
 ```
 
 ```{r}
+sequenceNums <- c(11, 6, 8, 11, 12, 11, 3, 7, 10, 8)
 
+pick_evens <- (sequenceNums %% 2) == 0
+sequenceNums[pick_evens]
 ```
 
 ```{r}
+x <- c(1,5,8)
+y <- c(5,8)
 
+# x裡的元素值是不是屬於y集合
+x %in% y
 ```
 
 ```{r}
+print(example[c("name","residence")])
 
+set_TaipeiMetro <- c("Taipei","New Taipei")
+pick_fromTaipeiMetro <- example$residence %in% set_TaipeiMetro
+example$name[pick_fromTaipeiMetro]
 ```
 
 ```{r}
-
+str(transcript100to103)
 ```
 
 ```{r}
-
+set_LawBusiness <- c("法學院","商學院")
+pick_lawBusiness <- transcript100to103$`學院` %in% set_LawBusiness
 ```
 
 ```{r}
-
+factor(transcript100to103$`學院`)
+levels(factor(transcript100to103$`學院`))
+unique(transcript100to103$`學院`)
 ```
 
 ```{r}
-
+pick_not_fromTaipeiMetro <- ! pick_fromTaipeiMetro
+# 或
+pick_not_fromTaipeiMetro <- !(example$`residence` %in% set_TaipeiMetro) # (..) 裡面會先運算完才做外面!的處理
 ```
 
 ```{r}
+print(example[c("name","residence")])
 
+example$name[pick_fromTaipeiMetro]
+example$name[pick_not_fromTaipeiMetro]
 ```
 
 ```{r}
+x2 <- c(1,NA,10)
+y2 <- c(-1,NA,20)
 
+x3 <- c(NA,"小花")
+y3 <- c(NA,"小華")
 ```
 
 ```{r}
-
+is.na(x2)
 ```
 
 ```{r}
+print(example[c("name","weight")])
 
+pick_na <- is.na(example$weight)
+example$name[pick_na]
 ```
 
 ```{r}
-
+list_victimAges_female$`數目` <- as.integer(list_victimAges_female$`數目`)
 ```
 
 ```{r}
-
+pick_na <- is.na(list_victimAges_female$`數目`)
+total_na <- sum(pick_na)
+print(total_na)
 ```
 
 ```{r}
+print(example[c("name","hobby")])
 
+pick_loveFood <- stringr::str_detect(example$hobby,"美食")
+example$name[pick_loveFood]
 ```
 
 ```{r}
-
+"美食 旅遊" == "美食"
 ```
 
 ```{r}
-
+pick_loveFood <- example$hobby == "美食"
+pick_loveFood
 ```
 
 ```{r}
+print(example[c("name","hobby")])
 
+pick_loveFood <- stringr::str_detect(example$hobby,"美食")
+example$name[pick_loveFood]
 ```
 
 ```{r}
