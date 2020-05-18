@@ -135,7 +135,28 @@ sort(startingAges) -> startingAges
 ```
 
 ```{r}
+covid19$`年齡層` <- 
+  factor(
+    covid19$`年齡層`, names(startingAges)
+  )
+levels(covid19$`年齡層`)
+```
 
+```{r}
+factor1 <- factor(
+  c("A","A","C","A","D","F","D","D")
+)
+factor1
+
+levels(factor1) <- c("優","佳","尚可","普")
+
+factor1
+```
+
+```{r}
+levels(factor1)[[1]] <- "Excellent"
+levels(factor1)[c(3,4)] <- c("C","D")
+factor1
 ```
 
 ```{r}
@@ -158,12 +179,25 @@ sort(startingAges) -> startingAges
 
 ```
 
+```{r}
 
+```
 
+```{r}
 
+```
 
+```{r}
 
+```
 
+```{r}
+
+```
+
+```{r}
+
+```
 
 
 
