@@ -96,11 +96,13 @@ list_showTimes_dance4
 ```
 
 ```{r}
-
+map(dance[[8]]$showInfo, ~ .x$time)
+map(dance[[8]]$showInfo, ~ .x$location)
 ```
 
 ```{r}
-
+num <- c(2,5,7,10,15)
+map(num,~ .x+3)
 ```
 
 ```{r}
