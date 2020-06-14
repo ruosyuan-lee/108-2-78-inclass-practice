@@ -288,17 +288,30 @@ if (grade >= 90) {
 ```
 
 ```{r}
-
+grade <- 80
+if (grade >= 90) {
+    print("優")
+} else if (grade >= 75 & grade <= 89) {
+    print("良")
+} else if (grade >= 70 & grade <= 85) {
+    print("尚可")
+} else {
+    print("待加強")
+}
 ```
 
 ```{r}
-
+grade <- 80
+if (grade >= 90) {
+    print("優")
+} else if (grade >= 70 & grade <= 85) {
+    print("尚可")
+} else if (grade >= 75 & grade <= 89) {
+    print("良")
+} else {
+    print("待加強")
+}
 ```
-
-```{r}
-
-```
-
 
 
 
