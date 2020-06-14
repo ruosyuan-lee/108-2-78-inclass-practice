@@ -252,8 +252,10 @@ compute_howEarly(examSubmissionTime$section[[3]], examSubmissionTime$time[[3]])
 ```{r}
 studentSequence <- 1:length(examSubmissionTime$section)
 
+library(purrr)
+
 list_howEarly <- map(studentSequence, ~compute_howEarly(examSubmissionTime$section[[.x]], 
-    examSubmissionTime$time[[.x]]))
+    examSubmissionTime$time[[.x]])) -> examSubmissionTime$howEarly
 ```
 
 ```{r}
