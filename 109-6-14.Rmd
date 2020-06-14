@@ -272,6 +272,22 @@ median(examSubmissionTime$howEarly[pick_78])
 ```
 
 ```{r}
+readline("請輸入你的成績（整數）： ") -> grade
+```
+
+```{r}
+if (grade >= 90) {
+    print("優")
+} else if (grade >= 80 & grade <= 89) {
+    print("良")
+} else if (grade >= 70 & grade <= 79) {
+    print("尚可")
+} else {
+    print("待加強")
+}
+```
+
+```{r}
 
 ```
 
@@ -279,8 +295,9 @@ median(examSubmissionTime$howEarly[pick_78])
 
 ```
 
+```{r}
 
-
+```
 
 
 
