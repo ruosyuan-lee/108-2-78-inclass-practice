@@ -1,0 +1,157 @@
+---
+title: "2020-06-22"
+author: "李若瑄"
+date: "22/6/2020"
+output: html_document
+---
+
+```{r}
+switch(實現的conditionExpression,
+       "conditionExpression1"= {    },
+       "conditionExpression2"= {    },
+       :
+       :
+       "conditionExpressionN"= {    },
+       {    })
+```
+
+```{r}
+n<- 540
+
+conditionExpression_outcome=
+  ifelse(n %% 2==0, "even", "odd") 
+
+switch(
+  conditionExpression_outcome,
+  "even"={fvalue <- n/2}, # 偶數
+  "odd"=fvalue <- -(n+1)/2, # 奇數；只有一行指令可省略{}
+  warning("n要整數喔")  
+)
+
+print(fvalue)
+```
+
+```{r}
+grades <- c(52, 77, 59, 88, 90)
+
+ifelse(grades >= 60, "及格", "不及格")
+```
+
+```{r}
+miniFun <- function() {
+    lubridate::now()
+}
+miniFun()
+```
+
+```{r}
+miniFun2 <- function() lubridate::now()
+miniFun2()
+```
+
+```{r}
+result <- {
+    x <- 2
+    y <- 3
+    x^y + 15
+}
+print(result)
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
