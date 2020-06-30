@@ -6,13 +6,10 @@ output: html_document
 ---
 
 ```{r}
-switch(實現的conditionExpression,
-       "conditionExpression1"= {    },
-       "conditionExpression2"= {    },
-       :
-       :
-       "conditionExpressionN"= {    },
-       {    })
+library(purrr)
+library(magrittr)
+library(stringr)
+library(lubridate)
 ```
 
 ```{r}
@@ -88,36 +85,36 @@ print(outcome2)
 ```
 
 ```{r}
-cut(x, c(a, b, c))
-```
-
-```{r}
 a <- c(1, 2, 3)
 cut(a, c(1, 2, 3))
 ```
 
 ```{r}
-grade <- sample(1:100, 10, replace = T)
+grade <- sample(1:100, 10, replace=T)
 
-grade <- grade %>% cut(c(-1, 69, 79, 89, 100))
+grade %>%
+  cut(c(-1,69,79,89,100)) -> grade
 
 levels(grade)
 
-letterGrade  # 有回存時要螢幕印出的訊息一定要加print
- <- switch(as.character(grade[[1]]), 
-    `(-1,69]` = {
-        print("-_-")
-        "F"
-    }, `(69,79]` = {
-        print("棒")
-        "C"
-    }, `(79,89]` = {
-        print("好棒")
-        "B"
-    }, `(89,100]` = {
-        print("好棒棒")
-        "A"
-    })
+switch(
+  as.character(grade[[1]]),
+  "(-1,69]"={
+    print("-_-")
+    "F"},
+  "(69,79]"={
+    print("棒")
+    "C"
+    },
+  "(79,89]"={
+    print("好棒")
+    "B"
+    },
+  "(89,100]"={
+    print("好棒棒")
+    "A"
+    }
+) -> letterGrade # 有回存時要螢幕印出的訊息一定要加print
 ```
 
 ```{r}
@@ -270,7 +267,7 @@ ifelse(x%%2 == 0, "even", "odd")
 
 ```{r}
 y <- sample(40:100, 20, replace = T)
-dplyr::case_when(y < 60 ~ "F", 60 <= y & y < 70 ~ "D", 71 <= y & y < 80 ~ "C", 80 <= 
+dplyr::case_when(y < 60 ~ "F", 60 <= y & y < 70 ~ "D", 70 <= y & y < 80 ~ "C", 80 <= 
     y & y < 90 ~ "B", 90 <= y ~ "A")
 ```
 
@@ -327,6 +324,19 @@ else {
 }
 ```
 
+```{r}
+readline("請輸入你的成績（整數）： ") -> grade # 單獨執行
+
+if(grade >=90){
+  print("優")
+} else if(grade>=80 & grade<=89){
+  print("良")
+} else if(grade>=70 & grade<=79){
+  print("尚可")
+} else {
+  print("待加強")
+}
+```
 
 
 
